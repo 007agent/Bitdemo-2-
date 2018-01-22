@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Bitcon Table</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <!--<div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-outer">
+                <p class="preloader-text">Loading..</p>
+            </div>
+        </div>
+    </div>-->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron text-center">
+                <h2 class="display-4">Simple CryptoCurrency Tables Demo!</h2>
+                <p class="lead">
+                    This is a simple app that displays cryptocurrency info.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-responsive" id="mytable">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <td>Name</td>
+                            <td>Price (CAD)</td>
+                            <td>Change (24h)</td>
+                            <td>High (24h)</td>
+                            <td>Low (24h)</td>
+                            <td id="mktcap">Market Cap (CAD)</td>
+                        </tr>
+                    </thead>
+                    <tbody id="currency">
+                        <tr id="btc">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="eth">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="bch">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="mkr">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="ltc">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="dash">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="zec">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="xmr">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="btg">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="bnb">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="neo">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="lsk">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="dcr">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="omg">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="ppt">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="qtum">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="rep">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="wtc">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="xrb">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="etc">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="xrp">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="xem">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!--<tr id="iota">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>-->
+                        <tr id="stellar">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>                   
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        var coins;
+        var sortable = [];      
+        function symbolToName(a) {
+            if (a == "BCH")
+                return "Bitcoin Cash";
+            else if (a == "BNB")
+                return "Binance Coin";
+            else if (a == "BTG")
+                return "Bitcoin Gold";
+            else if (a == "DASH")
+                return "Dash";
+            else if (a == "DCR")
+                return "Decred";
+            else if (a == "ETC")
+                return "Ethereum Classic";
+            else if (a == "LSK")
+                return "Lisk";
+            else if (a == "MKR")
+                return "Maker";
+            else if (a == "NEO")
+                return "Neo";
+            else if (a == "OMG")
+                return "OmiseGo";
+            else if (a == "PPT")
+                return "Populous";
+            else if (a == "QTUM")
+                return "QTUM";
+            else if (a == "REP")
+                return "Augur";
+            else if (a == "WTC")
+                return "Walton";
+            else if (a == "XMR")
+                return "Monero";
+            else if (a == "XRB")
+                return "RailBlocks";
+            else if (a == "ZEC")
+                return "Zcash";
+            else if(a=="XRP")
+                return "Ripple";
+            else if (a == "XLM")
+                return "Stellar";
+            else if (a == "IOTA")
+                return "IOTA";
+            else if (a == "XEM")
+                return "NEM";          
+            else if (a == String.fromCharCode(parseInt("0x039E", 16)))
+                return "Ethereum";
+            else if (a == String.fromCharCode(parseInt("0x0243", 16)))
+                return "Bitcoin";
+            else if (a == String.fromCharCode(parseInt("0x0141", 16)))
+                return "LiteCoin";
+        }
+        function addcommas(x){
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        function convNumber(a) {
+            var x = a.split(" ");
+            if (x[2] == "B") {
+                return "$ " + (addcommas(parseInt(parseFloat(x[1].replace(",", "")) * 10e9)));
+            }
+            else if (x[2] == "M") {
+                return "$ " + (addcommas(parseInt(parseFloat(x[1].replace(",", "")) * 10e6)));
+            }          
+        }
+        function changeColors(a, b) {
+            if ($(a).text() > b) {
+                $(a).addClass("decrease").removeClass("increase");
+            }
+            else if($(a).text() < b){
+            $(a).addClass("increase").removeClass("decrease");
+            }       
+            $(a).text(b);
+        }
+        function displayFirst(coins) {
+           
+            $("#btc td:eq(0)").text(symbolToName(coins.BTC.CAD.FROMSYMBOL));
+            $("#btc td:eq(1)").text(coins.BTC.CAD.PRICE);
+            $("#btc td:eq(2)").text(coins.BTC.CAD.CHANGE24HOUR);
+            $("#btc td:eq(3)").text(coins.BTC.CAD.HIGH24HOUR);
+            $("#btc td:eq(4)").text(coins.BTC.CAD.LOW24HOUR);
+            $("#btc td:eq(5)").text(convNumber(coins.BTC.CAD.MKTCAP));
+
+            $("#eth td:eq(0)").text(symbolToName(coins.ETH.CAD.FROMSYMBOL));
+            $("#eth td:eq(1)").text(coins.ETH.CAD.PRICE);
+            $("#eth td:eq(2)").text(coins.ETH.CAD.CHANGE24HOUR);
+            $("#eth td:eq(3)").text(coins.ETH.CAD.HIGH24HOUR);
+            $("#eth td:eq(4)").text(coins.ETH.CAD.LOW24HOUR);
+            $("#eth td:eq(5)").text(convNumber(coins.ETH.CAD.MKTCAP));
+
+            $("#bch td:eq(0)").text(symbolToName(coins.BCH.CAD.FROMSYMBOL));
+            $("#bch td:eq(1)").text(coins.BCH.CAD.PRICE);
+            $("#bch td:eq(2)").text(coins.BCH.CAD.CHANGE24HOUR);
+            $("#bch td:eq(3)").text(coins.BCH.CAD.HIGH24HOUR);
+            $("#bch td:eq(4)").text(coins.BCH.CAD.LOW24HOUR);
+            $("#bch td:eq(5)").text(convNumber(coins.BCH.CAD.MKTCAP));
+
+            $("#bnb td:eq(0)").text(symbolToName(coins.BNB.CAD.FROMSYMBOL));
+            $("#bnb td:eq(1)").text(coins.BNB.CAD.PRICE);
+            $("#bnb td:eq(2)").text(coins.BNB.CAD.CHANGE24HOUR);
+            $("#bnb td:eq(3)").text(coins.BNB.CAD.HIGH24HOUR);
+            $("#bnb td:eq(4)").text(coins.BNB.CAD.LOW24HOUR);
+            $("#bnb td:eq(5)").text(convNumber(coins.BNB.CAD.MKTCAP));
+
+            $("#btg td:eq(0)").text(symbolToName(coins.BTG.CAD.FROMSYMBOL));
+            $("#btg td:eq(1)").text(coins.BTG.CAD.PRICE);
+            $("#btg td:eq(2)").text(coins.BTG.CAD.CHANGE24HOUR);
+            $("#btg td:eq(3)").text(coins.BTG.CAD.HIGH24HOUR);
+            $("#btg td:eq(4)").text(coins.BTG.CAD.LOW24HOUR);
+            $("#btg td:eq(5)").text(convNumber(coins.BTG.CAD.MKTCAP));
+
+            $("#dash td:eq(0)").text(symbolToName(coins.DASH.CAD.FROMSYMBOL));
+            $("#dash td:eq(1)").text(coins.DASH.CAD.PRICE);
+            $("#dash td:eq(2)").text(coins.DASH.CAD.CHANGE24HOUR);
+            $("#dash td:eq(3)").text(coins.DASH.CAD.HIGH24HOUR);
+            $("#dash td:eq(4)").text(coins.DASH.CAD.LOW24HOUR);
+            $("#dash td:eq(5)").text(convNumber(coins.DASH.CAD.MKTCAP));
+
+            $("#dcr td:eq(0)").text(symbolToName(coins.DCR.CAD.FROMSYMBOL));
+            $("#dcr td:eq(1)").text(coins.DCR.CAD.PRICE);
+            $("#dcr td:eq(2)").text(coins.DCR.CAD.CHANGE24HOUR);
+            $("#dcr td:eq(3)").text(coins.DCR.CAD.HIGH24HOUR);
+            $("#dcr td:eq(4)").text(coins.DCR.CAD.LOW24HOUR);
+            $("#dcr td:eq(5)").text(convNumber(coins.DCR.CAD.MKTCAP));
+
+            $("#dcr td:eq(0)").text(symbolToName(coins.DCR.CAD.FROMSYMBOL));
+            $("#dcr td:eq(1)").text(coins.DCR.CAD.PRICE);
+            $("#dcr td:eq(2)").text(coins.DCR.CAD.CHANGE24HOUR);
+            $("#dcr td:eq(3)").text(coins.DCR.CAD.HIGH24HOUR);
+            $("#dcr td:eq(4)").text(coins.DCR.CAD.LOW24HOUR);
+            $("#dcr td:eq(5)").text(convNumber(coins.DCR.CAD.MKTCAP));
+
+            $("#etc td:eq(0)").text(symbolToName(coins.ETC.CAD.FROMSYMBOL));
+            $("#etc td:eq(1)").text(coins.ETC.CAD.PRICE);
+            $("#etc td:eq(2)").text(coins.ETC.CAD.CHANGE24HOUR);
+            $("#etc td:eq(3)").text(coins.ETC.CAD.HIGH24HOUR);
+            $("#etc td:eq(4)").text(coins.ETC.CAD.LOW24HOUR);
+            $("#etc td:eq(5)").text(convNumber(coins.ETC.CAD.MKTCAP));
+
+            $("#ltc td:eq(0)").text(symbolToName(coins.LTC.CAD.FROMSYMBOL));
+            $("#ltc td:eq(1)").text(coins.LTC.CAD.PRICE);
+            $("#ltc td:eq(2)").text(coins.LTC.CAD.CHANGE24HOUR);
+            $("#ltc td:eq(3)").text(coins.LTC.CAD.HIGH24HOUR);
+            $("#ltc td:eq(4)").text(coins.LTC.CAD.LOW24HOUR);
+            $("#ltc td:eq(5)").text(convNumber(coins.LTC.CAD.MKTCAP));
+
+            $("#lsk td:eq(0)").text(symbolToName(coins.LSK.CAD.FROMSYMBOL));
+            $("#lsk td:eq(1)").text(coins.LSK.CAD.PRICE);
+            $("#lsk td:eq(2)").text(coins.LSK.CAD.CHANGE24HOUR);
+            $("#lsk td:eq(3)").text(coins.LSK.CAD.HIGH24HOUR);
+            $("#lsk td:eq(4)").text(coins.LSK.CAD.LOW24HOUR);
+            $("#lsk td:eq(5)").text(convNumber(coins.LSK.CAD.MKTCAP));
+
+            $("#mkr td:eq(0)").text(symbolToName(coins.MKR.CAD.FROMSYMBOL));
+            $("#mkr td:eq(1)").text(coins.MKR.CAD.PRICE);
+            $("#mkr td:eq(2)").text(coins.MKR.CAD.CHANGE24HOUR);
+            $("#mkr td:eq(3)").text(coins.MKR.CAD.HIGH24HOUR);
+            $("#mkr td:eq(4)").text(coins.MKR.CAD.LOW24HOUR);
+            $("#mkr td:eq(5)").text(convNumber(coins.MKR.CAD.MKTCAP));
+
+            $("#neo td:eq(0)").text(symbolToName(coins.NEO.CAD.FROMSYMBOL));
+            $("#neo td:eq(1)").text(coins.NEO.CAD.PRICE);
+            $("#neo td:eq(2)").text(coins.NEO.CAD.CHANGE24HOUR);
+            $("#neo td:eq(3)").text(coins.NEO.CAD.HIGH24HOUR);
+            $("#neo td:eq(4)").text(coins.NEO.CAD.LOW24HOUR);
+            $("#neo td:eq(5)").text(convNumber(coins.NEO.CAD.MKTCAP));
+
+            $("#omg td:eq(0)").text(symbolToName(coins.OMG.CAD.FROMSYMBOL));
+            $("#omg td:eq(1)").text(coins.OMG.CAD.PRICE);
+            $("#omg td:eq(2)").text(coins.OMG.CAD.CHANGE24HOUR);
+            $("#omg td:eq(3)").text(coins.OMG.CAD.HIGH24HOUR);
+            $("#omg td:eq(4)").text(coins.OMG.CAD.LOW24HOUR);
+            $("#omg td:eq(5)").text(convNumber(coins.OMG.CAD.MKTCAP));
+
+            $("#ppt td:eq(0)").text(symbolToName(coins.PPT.CAD.FROMSYMBOL));
+            $("#ppt td:eq(1)").text(coins.PPT.CAD.PRICE);
+            $("#ppt td:eq(2)").text(coins.PPT.CAD.CHANGE24HOUR);
+            $("#ppt td:eq(3)").text(coins.PPT.CAD.HIGH24HOUR);
+            $("#ppt td:eq(4)").text(coins.PPT.CAD.LOW24HOUR);
+            $("#ppt td:eq(5)").text(convNumber(coins.PPT.CAD.MKTCAP));
+
+            $("#qtum td:eq(0)").text(symbolToName(coins.QTUM.CAD.FROMSYMBOL));
+            $("#qtum td:eq(1)").text(coins.QTUM.CAD.PRICE);
+            $("#qtum td:eq(2)").text(coins.QTUM.CAD.CHANGE24HOUR);
+            $("#qtum td:eq(3)").text(coins.QTUM.CAD.HIGH24HOUR);
+            $("#qtum td:eq(4)").text(coins.QTUM.CAD.LOW24HOUR);
+            $("#qtum td:eq(5)").text(convNumber(coins.QTUM.CAD.MKTCAP));
+
+            $("#rep td:eq(0)").text(symbolToName(coins.REP.CAD.FROMSYMBOL));
+            $("#rep td:eq(1)").text(coins.REP.CAD.PRICE);
+            $("#rep td:eq(2)").text(coins.REP.CAD.CHANGE24HOUR);
+            $("#rep td:eq(3)").text(coins.REP.CAD.HIGH24HOUR);
+            $("#rep td:eq(4)").text(coins.REP.CAD.LOW24HOUR);
+            $("#rep td:eq(5)").text(convNumber(coins.REP.CAD.MKTCAP));
+
+            $("#wtc td:eq(0)").text(symbolToName(coins.WTC.CAD.FROMSYMBOL));
+            $("#wtc td:eq(1)").text(coins.WTC.CAD.PRICE);
+            $("#wtc td:eq(2)").text(coins.WTC.CAD.CHANGE24HOUR);
+            $("#wtc td:eq(3)").text(coins.WTC.CAD.HIGH24HOUR);
+            $("#wtc td:eq(4)").text(coins.WTC.CAD.LOW24HOUR);
+            $("#wtc td:eq(5)").text(convNumber(coins.WTC.CAD.MKTCAP));
+
+            $("#xmr td:eq(0)").text(symbolToName(coins.XMR.CAD.FROMSYMBOL));
+            $("#xmr td:eq(1)").text(coins.XMR.CAD.PRICE);
+            $("#xmr td:eq(2)").text(coins.XMR.CAD.CHANGE24HOUR);
+            $("#xmr td:eq(3)").text(coins.XMR.CAD.HIGH24HOUR);
+            $("#xmr td:eq(4)").text(coins.XMR.CAD.LOW24HOUR);
+            $("#xmr td:eq(5)").text(convNumber(coins.XMR.CAD.MKTCAP));
+
+            $("#xrb td:eq(0)").text(symbolToName(coins.XRB.CAD.FROMSYMBOL));
+            $("#xrb td:eq(1)").text(coins.XRB.CAD.PRICE);
+            $("#xrb td:eq(2)").text(coins.XRB.CAD.CHANGE24HOUR);
+            $("#xrb td:eq(3)").text(coins.XRB.CAD.HIGH24HOUR);
+            $("#xrb td:eq(4)").text(coins.XRB.CAD.LOW24HOUR);
+            $("#xrb td:eq(5)").text(convNumber(coins.XRB.CAD.MKTCAP));
+
+            $("#zec td:eq(0)").text(symbolToName(coins.ZEC.CAD.FROMSYMBOL));
+            $("#zec td:eq(1)").text(coins.ZEC.CAD.PRICE);
+            $("#zec td:eq(2)").text(coins.ZEC.CAD.CHANGE24HOUR);
+            $("#zec td:eq(3)").text(coins.ZEC.CAD.HIGH24HOUR);
+            $("#zec td:eq(4)").text(coins.ZEC.CAD.LOW24HOUR);
+            $("#zec td:eq(5)").text(convNumber(coins.ZEC.CAD.MKTCAP));
+
+            $("#xrp td:eq(0)").text(symbolToName(coins.XRP.CAD.FROMSYMBOL));
+            changeColors("#xrp td:eq(1)", coins.XRP.CAD.PRICE);
+            changeColors("#xrp td:eq(2)", coins.XRP.CAD.CHANGE24HOUR);
+            changeColors("#xrp td:eq(3)", coins.XRP.CAD.HIGH24HOUR);
+            changeColors("#xrp td:eq(4)", coins.XRP.CAD.LOW24HOUR);
+            changeColors("#xrp td:eq(5)", convNumber(coins.XRP.CAD.MKTCAP));
+
+            $("#iota td:eq(0)").text(symbolToName(coins.IOTA.CAD.FROMSYMBOL));
+            changeColors("#iota td:eq(1)", coins.IOTA.CAD.PRICE);
+            changeColors("#iota td:eq(2)", coins.IOTA.CAD.CHANGE24HOUR);
+            changeColors("#iota td:eq(3)", coins.IOTA.CAD.HIGH24HOUR);
+            changeColors("#iota td:eq(4)", coins.IOTA.CAD.LOW24HOUR);
+            changeColors("#iota td:eq(5)", convNumber(coins.IOTA.CAD.MKTCAP));
+
+            $("#xem td:eq(0)").text(symbolToName(coins.XEM.CAD.FROMSYMBOL));
+            changeColors("#xem td:eq(1)", coins.XEM.CAD.PRICE);
+            changeColors("#xem td:eq(2)", coins.XEM.CAD.CHANGE24HOUR);
+            changeColors("#xem td:eq(3)", coins.XEM.CAD.HIGH24HOUR);
+            changeColors("#xem td:eq(4)", coins.XEM.CAD.LOW24HOUR);
+            changeColors("#xem td:eq(5)", convNumber(coins.XEM.CAD.MKTCAP));
+
+            $("#stellar td:eq(0)").text(symbolToName(coins.XLM.CAD.FROMSYMBOL));
+            changeColors("#stellar td:eq(1)", coins.XLM.CAD.PRICE);
+            changeColors("#stellar td:eq(2)", coins.XLM.CAD.CHANGE24HOUR);
+            changeColors("#stellar td:eq(3)", coins.XLM.CAD.HIGH24HOUR);
+            changeColors("#stellar td:eq(4)", coins.XLM.CAD.LOW24HOUR);
+            changeColors("#stellar td:eq(5)", convNumber(coins.XLM.CAD.MKTCAP));
+        }
+        function displaySecond(coins) {
+            $("#btc td:eq(0)").text(symbolToName(coins.BTC.CAD.FROMSYMBOL));
+            changeColors("#btc td:eq(1)", coins.BTC.CAD.PRICE);
+            changeColors("#btc td:eq(2)", coins.BTC.CAD.CHANGE24HOUR);
+            changeColors("#btc td:eq(3)", coins.BTC.CAD.HIGH24HOUR);
+            changeColors("#btc td:eq(4)", coins.BTC.CAD.LOW24HOUR);
+            changeColors("#btc td:eq(5)", convNumber(coins.BTC.CAD.MKTCAP));
+
+            $("#eth td:eq(0)").text(symbolToName(coins.ETH.CAD.FROMSYMBOL));
+            changeColors("#eth td:eq(1)", coins.ETH.CAD.PRICE);
+            changeColors("#eth td:eq(2)", coins.ETH.CAD.CHANGE24HOUR);
+            changeColors("#eth td:eq(3)", coins.ETH.CAD.HIGH24HOUR);
+            changeColors("#eth td:eq(4)", coins.ETH.CAD.LOW24HOUR);
+            changeColors("#eth td:eq(5)", convNumber(coins.ETH.CAD.MKTCAP));
+             
+            $("#bch td:eq(0)").text(symbolToName(coins.BCH.CAD.FROMSYMBOL));
+            changeColors("#bch td:eq(1)", coins.BCH.CAD.PRICE);
+            changeColors("#bch td:eq(2)", coins.BCH.CAD.CHANGE24HOUR);
+            changeColors("#bch td:eq(3)", coins.BCH.CAD.HIGH24HOUR);
+            changeColors("#bch td:eq(4)", coins.BCH.CAD.LOW24HOUR);
+            changeColors("#bch td:eq(5)", convNumber(coins.BCH.CAD.MKTCAP));
+
+            $("#bnb td:eq(0)").text(symbolToName(coins.BNB.CAD.FROMSYMBOL));
+            changeColors("#bnb td:eq(1)", coins.BNB.CAD.PRICE);
+            changeColors("#bnb td:eq(2)", coins.BNB.CAD.CHANGE24HOUR);
+            changeColors("#bnb td:eq(3)", coins.BNB.CAD.HIGH24HOUR);
+            changeColors("#bnb td:eq(4)", coins.BNB.CAD.LOW24HOUR);
+            changeColors("#bnb td:eq(5)", convNumber(coins.BNB.CAD.MKTCAP));
+     
+            $("#btg td:eq(0)").text(symbolToName(coins.BTG.CAD.FROMSYMBOL));
+            changeColors("#btg td:eq(1)", coins.BTG.CAD.PRICE);
+            changeColors("#btg td:eq(2)", coins.BTG.CAD.CHANGE24HOUR);
+            changeColors("#btg td:eq(3)", coins.BTG.CAD.HIGH24HOUR);
+            changeColors("#btg td:eq(4)", coins.BTG.CAD.LOW24HOUR);
+            changeColors("#btg td:eq(5)", convNumber(coins.BTG.CAD.MKTCAP));
+
+            
+            $("#dash td:eq(0)").text(symbolToName(coins.DASH.CAD.FROMSYMBOL));
+            changeColors("#dash td:eq(1)", coins.DASH.CAD.PRICE);
+            changeColors("#dash td:eq(2)", coins.DASH.CAD.CHANGE24HOUR);
+            changeColors("#dash td:eq(3)", coins.DASH.CAD.HIGH24HOUR);
+            changeColors("#dash td:eq(4)", coins.DASH.CAD.LOW24HOUR);
+            changeColors("#dash td:eq(5)", convNumber(coins.DASH.CAD.MKTCAP));
+
+            $("#dcr td:eq(0)").text(symbolToName(coins.DCR.CAD.FROMSYMBOL));
+            changeColors("#dcr td:eq(1)", coins.DCR.CAD.PRICE);
+            changeColors("#dcr td:eq(2)", coins.DCR.CAD.CHANGE24HOUR);
+            changeColors("#dcr td:eq(3)", coins.DCR.CAD.HIGH24HOUR);
+            changeColors("#dcr td:eq(4)", coins.DCR.CAD.LOW24HOUR);
+            changeColors("#dcr td:eq(5)", convNumber(coins.DCR.CAD.MKTCAP));
+         
+
+            $("#etc td:eq(0)").text(symbolToName(coins.ETC.CAD.FROMSYMBOL));
+            changeColors("#etc td:eq(1)", coins.ETC.CAD.PRICE);
+            changeColors("#etc td:eq(2)", coins.ETC.CAD.CHANGE24HOUR);
+            changeColors("#etc td:eq(3)", coins.ETC.CAD.HIGH24HOUR);
+            changeColors("#etc td:eq(4)", coins.ETC.CAD.LOW24HOUR);
+            changeColors("#etc td:eq(5)", convNumber(coins.ETC.CAD.MKTCAP));
+
+            $("#ltc td:eq(0)").text(symbolToName(coins.LTC.CAD.FROMSYMBOL));
+            changeColors("#ltc td:eq(1)", coins.LTC.CAD.PRICE);
+            changeColors("#ltc td:eq(2)", coins.LTC.CAD.CHANGE24HOUR);
+            changeColors("#ltc td:eq(3)", coins.LTC.CAD.HIGH24HOUR);
+            changeColors("#ltc td:eq(4)", coins.LTC.CAD.LOW24HOUR);
+            changeColors("#ltc td:eq(5)", convNumber(coins.LTC.CAD.MKTCAP));
+
+            $("#lsk td:eq(0)").text(symbolToName(coins.LSK.CAD.FROMSYMBOL));
+            changeColors("#lsk td:eq(1)", coins.LSK.CAD.PRICE);
+            changeColors("#lsk td:eq(2)", coins.LSK.CAD.CHANGE24HOUR);
+            changeColors("#lsk td:eq(3)", coins.LSK.CAD.HIGH24HOUR);
+            changeColors("#lsk td:eq(4)", coins.LSK.CAD.LOW24HOUR);
+            changeColors("#lsk td:eq(5)", convNumber(coins.LSK.CAD.MKTCAP));
+
+            $("#mkr td:eq(0)").text(symbolToName(coins.MKR.CAD.FROMSYMBOL));
+            changeColors("#mkr td:eq(1)", coins.MKR.CAD.PRICE);
+            changeColors("#mkr td:eq(2)", coins.MKR.CAD.CHANGE24HOUR);
+            changeColors("#mkr td:eq(3)", coins.MKR.CAD.HIGH24HOUR);
+            changeColors("#mkr td:eq(4)", coins.MKR.CAD.LOW24HOUR);
+            changeColors("#mkr td:eq(5)", convNumber(coins.MKR.CAD.MKTCAP));
+      
+            $("#neo td:eq(0)").text(symbolToName(coins.NEO.CAD.FROMSYMBOL));
+            changeColors("#neo td:eq(1)", coins.NEO.CAD.PRICE);
+            changeColors("#neo td:eq(2)", coins.NEO.CAD.CHANGE24HOUR);
+            changeColors("#neo td:eq(3)", coins.NEO.CAD.HIGH24HOUR);
+            changeColors("#neo td:eq(4)", coins.NEO.CAD.LOW24HOUR);
+            changeColors("#neo td:eq(5)", convNumber(coins.NEO.CAD.MKTCAP));
+
+            $("#omg td:eq(0)").text(symbolToName(coins.OMG.CAD.FROMSYMBOL));
+            changeColors("#omg td:eq(1)", coins.OMG.CAD.PRICE);
+            changeColors("#omg td:eq(2)", coins.OMG.CAD.CHANGE24HOUR);
+            changeColors("#omg td:eq(3)", coins.OMG.CAD.HIGH24HOUR);
+            changeColors("#omg td:eq(4)", coins.OMG.CAD.LOW24HOUR);
+            changeColors("#omg td:eq(5)", convNumber(coins.OMG.CAD.MKTCAP));
+           
+            $("#ppt td:eq(0)").text(symbolToName(coins.PPT.CAD.FROMSYMBOL));
+            changeColors("#ppt td:eq(1)", coins.PPT.CAD.PRICE);
+            changeColors("#ppt td:eq(2)", coins.PPT.CAD.CHANGE24HOUR);
+            changeColors("#ppt td:eq(3)", coins.PPT.CAD.HIGH24HOUR);
+            changeColors("#ppt td:eq(4)", coins.PPT.CAD.LOW24HOUR);
+            changeColors("#ppt td:eq(5)", convNumber(coins.PPT.CAD.MKTCAP));
+
+            $("#qtum td:eq(0)").text(symbolToName(coins.QTUM.CAD.FROMSYMBOL));
+            changeColors("#qtum td:eq(1)", coins.QTUM.CAD.PRICE);
+            changeColors("#qtum td:eq(2)", coins.QTUM.CAD.CHANGE24HOUR);
+            changeColors("#qtum td:eq(3)", coins.QTUM.CAD.HIGH24HOUR);
+            changeColors("#qtum td:eq(4)", coins.QTUM.CAD.LOW24HOUR);
+            changeColors("#qtum td:eq(5)", convNumber(coins.QTUM.CAD.MKTCAP));
+       
+         
+            $("#rep td:eq(0)").text(symbolToName(coins.REP.CAD.FROMSYMBOL));
+            changeColors("#rep td:eq(1)", coins.REP.CAD.PRICE);
+            changeColors("#rep td:eq(2)", coins.REP.CAD.CHANGE24HOUR);
+            changeColors("#rep td:eq(3)", coins.REP.CAD.HIGH24HOUR);
+            changeColors("#rep td:eq(4)", coins.REP.CAD.LOW24HOUR);
+            changeColors("#rep td:eq(5)", convNumber(coins.REP.CAD.MKTCAP));
+
+
+            $("#wtc td:eq(0)").text(symbolToName(coins.WTC.CAD.FROMSYMBOL));
+            changeColors("#wtc td:eq(1)", coins.WTC.CAD.PRICE);
+            changeColors("#wtc td:eq(2)", coins.WTC.CAD.CHANGE24HOUR);
+            changeColors("#wtc td:eq(3)", coins.WTC.CAD.HIGH24HOUR);
+            changeColors("#wtc td:eq(4)", coins.WTC.CAD.LOW24HOUR);
+            changeColors("#wtc td:eq(5)", convNumber(coins.WTC.CAD.MKTCAP));
+
+            $("#xmr td:eq(0)").text(symbolToName(coins.XMR.CAD.FROMSYMBOL));
+            changeColors("#xmr td:eq(1)", coins.XMR.CAD.PRICE);
+            changeColors("#xmr td:eq(2)", coins.XMR.CAD.CHANGE24HOUR);
+            changeColors("#xmr td:eq(3)", coins.XMR.CAD.HIGH24HOUR);
+            changeColors("#xmr td:eq(4)", coins.XMR.CAD.LOW24HOUR);
+            changeColors("#xmr td:eq(5)", convNumber(coins.XMR.CAD.MKTCAP));
+
+            $("#xrb td:eq(0)").text(symbolToName(coins.XRB.CAD.FROMSYMBOL));
+            changeColors("#xrb td:eq(1)", coins.XRB.CAD.PRICE);
+            changeColors("#xrb td:eq(2)", coins.XRB.CAD.CHANGE24HOUR);
+            changeColors("#xrb td:eq(3)", coins.XRB.CAD.HIGH24HOUR);
+            changeColors("#xrb td:eq(4)", coins.XRB.CAD.LOW24HOUR);
+            changeColors("#xrb td:eq(5)", convNumber(coins.XRB.CAD.MKTCAP));
+
+            $("#xrp td:eq(0)").text(symbolToName(coins.XRP.CAD.FROMSYMBOL));
+            changeColors("#xrp td:eq(1)", coins.XRP.CAD.PRICE);
+            changeColors("#xrp td:eq(2)", coins.XRP.CAD.CHANGE24HOUR);
+            changeColors("#xrp td:eq(3)", coins.XRP.CAD.HIGH24HOUR);
+            changeColors("#xrp td:eq(4)", coins.XRP.CAD.LOW24HOUR);
+            changeColors("#xrp td:eq(5)", convNumber(coins.XRP.CAD.MKTCAP));
+
+            $("#zec td:eq(0)").text(symbolToName(coins.ZEC.CAD.FROMSYMBOL));
+            changeColors("#zec td:eq(1)", coins.ZEC.CAD.PRICE);
+            changeColors("#zec td:eq(2)", coins.ZEC.CAD.CHANGE24HOUR);
+            changeColors("#zec td:eq(3)", coins.ZEC.CAD.HIGH24HOUR);
+            changeColors("#zec td:eq(4)", coins.ZEC.CAD.LOW24HOUR);
+            changeColors("#zec td:eq(5)", convNumber(coins.ZEC.CAD.MKTCAP));
+
+            $("#xrp td:eq(0)").text(symbolToName(coins.XRP.CAD.FROMSYMBOL));
+            changeColors("#xrp td:eq(1)", coins.XRP.CAD.PRICE);
+            changeColors("#xrp td:eq(2)", coins.XRP.CAD.CHANGE24HOUR);
+            changeColors("#xrp td:eq(3)", coins.XRP.CAD.HIGH24HOUR);
+            changeColors("#xrp td:eq(4)", coins.XRP.CAD.LOW24HOUR);
+            changeColors("#xrp td:eq(5)", convNumber(coins.XRP.CAD.MKTCAP));
+
+            $("#iota td:eq(0)").text(symbolToName(coins.IOTA.CAD.FROMSYMBOL));
+            changeColors("#iota td:eq(1)", coins.IOTA.CAD.PRICE);
+            changeColors("#iota td:eq(2)", coins.IOTA.CAD.CHANGE24HOUR);
+            changeColors("#iota td:eq(3)", coins.IOTA.CAD.HIGH24HOUR);
+            changeColors("#iota td:eq(4)", coins.IOTA.CAD.LOW24HOUR);
+            changeColors("#iota td:eq(5)", convNumber(coins.IOTA.CAD.MKTCAP));
+
+            $("#xem td:eq(0)").text(symbolToName(coins.XEM.CAD.FROMSYMBOL));
+            changeColors("#xem td:eq(1)", coins.XEM.CAD.PRICE);
+            changeColors("#xem td:eq(2)", coins.XEM.CAD.CHANGE24HOUR);
+            changeColors("#xem td:eq(3)", coins.XEM.CAD.HIGH24HOUR);
+            changeColors("#xem td:eq(4)", coins.XEM.CAD.LOW24HOUR);
+            changeColors("#xem td:eq(5)", convNumber(coins.XEM.CAD.MKTCAP));
+
+            $("#stellar td:eq(0)").text(symbolToName(coins.XLM.CAD.FROMSYMBOL));
+            changeColors("#stellar td:eq(1)", coins.XLM.CAD.PRICE);
+            changeColors("#stellar td:eq(2)", coins.XLM.CAD.CHANGE24HOUR);
+            changeColors("#stellar td:eq(3)", coins.XLM.CAD.HIGH24HOUR);
+            changeColors("#stellar td:eq(4)", coins.XLM.CAD.LOW24HOUR);
+            changeColors("#stellar td:eq(5)", convNumber(coins.XLM.CAD.MKTCAP));
+        }    
+        function fetchData() {
+            var url = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,BTC,DASH,LTC,BCH,MKR,ZEC,XMR,BTG,NEO,DCR,REP,PPT,QTUM,ETC,WTC,LSK,OMG,XRB,BNB,XRP,IOTA,XEM,XLM&tsyms=CAD";
+            $.getJSON(url, function (res) {
+                coins = res.DISPLAY;
+                console.log(coins);
+                displayFirst(coins);
+            }).done(function () {
+                $('#mytable').DataTable({
+                    paging: false,
+                    searching: false,
+                });
+                $("#mytable_info").remove();
+                $("#mktcap").trigger("click");
+                $("#mktcap").trigger("click");
+            });
+          
+        }
+        function fetch() {
+            var url = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,BTC,DASH,LTC,BCH,MKR,ZEC,XMR,BTG,NEO,DCR,REP,PPT,QTUM,ETC,WTC,LSK,OMG,XRB,BNB,XRP,IOTA,XEM,XLM&tsyms=CAD";
+            $.getJSON(url, function (res) {
+                coins = res.DISPLAY;
+                console.log(coins);
+                displaySecond(coins);             
+            });         
+        }
+        $(document).ready(function () {
+            fetchData();                        
+            setInterval(fetch, 5000);
+        });
+    </script>
+</body>
+</html>
